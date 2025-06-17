@@ -9,7 +9,24 @@
 
 <body>
 
-<h1>投稿一覧</h1>
+   <table>
+       <tr>
+           <th>ID</th>
+           <th>title</th>
+           <th>content</th>
+           <th>created_at</th>
+           <th>updated_at</th>
+       </tr>
+       @foreach($posts as $product)
+           <tr>
+               <td>{{ $product->id }}</td>
+               <td>{{ $product->title }}</td>
+               <td>{{ $product->content }}</td>
+               <td>{{ $product->created_at }}</td>
+               <td>{{ $product->updated_at }}</td>
+           </tr>            
+       @endforeach       
+   </table>
 
 </body>
 
